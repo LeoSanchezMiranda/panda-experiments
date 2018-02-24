@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="language" content="english"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Bite n Scratch | Zombie Hunting | Outdoor Activities | New Columbia</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/zombies.css">
+
+</head>
+
+<body>
+
+<!-- HEADER CONTAINER START -->
+<div id="header_container" align="center">
+    <!-- HEADER START -->
+    <div id="header">
+        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+        <div id="right_header" align="right">
+            <div id="social">
+                <ul id="navlist">
+                    <li id="fb"><a href="https://www.facebook.com/BNSZombieHunting" target="_blank"></a></li>
+                    <li id="tw"><a href="https://twitter.com/ZombieHuntingG" target="_blank"></a></li>
+                </ul>
+            </div>
+            <!--<div id="address">
+                <h1>Bite n' Scratch Hunting Grounds 1636 Doomlake Dr. </h1> 
+                <p>New Columbia MO, 65202</p>
+            </div>-->
+    	</div>
+        <!-- MENU START -->
+        <div id="menu" align="center">
+            <div id="menu_container">
+            <ul id="main_menu">
+                <li id="home_btn"><a href="index.html"><span aria-hidden="true" class="icon-home"></span>Home</a></li>
+                <li id="hunting_btn"><a href="hunting.html"><span aria-hidden="true" class="icon-target"></span>Hunting</a></li>
+                <li id="activities_btn"><a href="activities.html"><span aria-hidden="true" class="icon-fire"></span>Activities</a></li>
+                <li id="contact_btn"><a href="contact.html"><span aria-hidden="true" class="icon-mail"></span>Contact</a></li>
+                <li id="useless_btn"><a href="404.html"><span aria-hidden="true" class="icon-grin"></span>Useless</a></li>
+                <li id="members_btn"><a href="404.html"><span aria-hidden="true" class="icon-user"></span>Members</a></li>
+            </ul>
+            <div id="login_panel" class="shadow_img nono">
+                <form id="login_form" name="login_form" action="members.html" method="get">
+                    <label for="user_email" id="user_ID_label">e-Mail<span class="error_span"></span></label>
+                    <input type="email" id="user_email" name="user_email" required placeholder="admin@micluster.com" class="red_john shadow_txt" />
+
+                    <label for="user_pass" id="user_pass_label">Password<span class="error_span"></span></label>
+                    <input type="password" id="user_pass" name="user_pass" required placeholder="******" class="red_john shadow_txt" />
+
+                    <button type="submit" id="login_btn"><span aria-hidden="true" class="icon-user"></span> ENTER</button> 
+                </form>
+                <a title="forgot.html" href="404.html" class="shadow_txt replacehref"><span aria-hidden="true" class="icon-user"></span>FORGOT MY PASSWORD</a><br />
+                <a title="register.html" href="404.html" class="shadow_txt replacehref"><span aria-hidden="true" class="icon-user"></span>REGISTER</a>
+            </div>
+            </div>
+        </div><!-- MENU ENDS -->
+    </div><!-- HEADER ENDS -->
+</div><!-- HEADER CONTAINER ENDS -->
+
+<div id="page">
+    <!-- CONTENT START -->
+    <div id="content" class="contact_main">
+
+    
+    
+    <!-- MAIN START -->
+    <div id="main">
+        <div id="gStart" class="extra_space" >
+            <div id="copy_contact">
+                <div id="contact_info" class="shadow_txt">
+                    <h1>Bite n' Scratch Hunting Grounds</h1>
+                    <span aria-hidden="true" class="icon-location"></span>
+                    <div id="address_info_C">
+                        <p>1636 Doomlake Dr</p>
+                        <p>New Columbia, MO.</p>
+                        <p>65202</p><br />
+                    </div>
+                    <div id="phone_info_C" >
+                        <p><span aria-hidden="true" class="icon-phone"></span> <a href="tel:573 966 2437">+1 573 966 2437</a></p>
+                        <p><span aria-hidden="true" class="icon-print"></span> <a href="tel:573 472 2733">+1 573 472 2733</a></p>
+                    </div>
+                    <div id="social_info_C">
+                        <p><span aria-hidden="true" class="icon-facebook"></span> <a href="#">/BSZombieHunt</a></p>
+                        <p><span aria-hidden="true" class="icon-twitter"></span> <a href="#">@BSZombieHunt</a></p>
+                    </div>
+                </div>
+                <!-- CONTACT FORM AREA -->
+                <div id="contact_form">
+                    <form id="contact_us" name="contact_us" method="post" action="contact_us.html">
+                        <label for="name" class="shadow_txt">Name</label><span id="name_message" class="form_message">*</span>
+                        <input type="text" name="name" id="name_field" placeholder="John Doe" required class="shadow_txt red_john" />
+
+                        <label for="mail" class="shadow_txt">e-Mail</label><span id="mail_message" class="form_message">*</span>
+                        <input type="email" name="email" id="email_field" placeholder="yourname@yourdomain.com" required class="shadow_txt red_john" />
+
+                        <label for="phone" class="shadow_txt">Phone number</label><span id="phone_message" class="form_message">*</span>
+                        <input type="tel" name="phone" id="phone_field" placeholder="(XXX) XXX-XXXX" required class="shadow_txt red_john" />
+
+                        <label for="topic" class="shadow_txt">You're contacting us because:</label><span id="Span1" class="form_message"></span>
+                        <select name="topic" id="topic" class="">
+                            <option value="Just to say Hi" selected>I just wanted to say Hi!</option>
+                            <option value="Date request" >I would like to visit on a specific date.</option>
+                            <option value="Zombie sign up" >I have a zombie to donate.</option>
+                            <option value="Other" >Something else...</option>
+                        </select>
+
+                        <div id="other_container" class="nono">
+                            <label for="other" class="shadow_txt">Could you be more specific?</label><span id="other_message" class="form_message"></span>
+                            <input type="other" name="other" id="other" placeholder="I'm a zombie in rehab, etc..." class="shadow_txt red_john" />
+                        </div>
+
+                        <div id="date_selection_container" class="nono">
+                            <div id="date_selector">
+                                <label for="date_wanted" class="shadow_txt">Date:</label><span id="date_message" class="form_message"></span>
+                                <input type="date" name="date_wanted" id="date_wanted" placeholder="mm/dd/YYY" class="shadow_txt red_john"  />
+                            </div>
+                            <div id="hunters_selector">
+                                <label for="no_persons" class="shadow_txt">Persons:</label><span id="persons_message" class="form_message"></span>
+                                <input type="number" name="no_persons" id="no_persons" placeholder="" min="1" max="10" value="1" class="shadow_txt red_john" />
+                            </div>
+                        </div>
+
+                        <div id="donate_zombie_container" class="nono">
+                            <div id="z_name">
+                                <label for="zombie_name" class="shadow_txt">Zombie's name:</label><span id="z_name_message" class="form_message"></span>
+                                <input type="other" name="zombie_name" id="zombie_name" placeholder="Name Tag." class="shadow_txt red_john" />
+                            </div>
+                            <div id="i_date">
+                                <label for="infection_date" class="shadow_txt">Zombie since:</label><span id="i_date_message" class="form_message"></span>
+                                <input type="date" name="infection_date" id="infection_date" placeholder="mm/dd/YYY" class="shadow_txt red_john"  />
+                            </div>
+                        </div>
+
+                        <label for="message" class="shadow_txt">Message</label><span id="message_message" class="form_message">*</span>
+                        <textarea name="message_field" id="message_field" required class="shadow_txt red_john"></textarea>
+
+                        <button type="submit" name="submit_btn" id="submit_btn" value="Send us a bite" class="shadow_img">Send us a bite</button>
+                    </form>
+                </div><!-- CONTACT FORM AREA ENDS -->
+                <div id="map">
+                    <img src="images/gMap.png" class="shadow_img"/>
+                </div>
+            </div>
+        </div>
+    
+    </div><!-- MAIN ENDS -->
+    </div><!-- CONTENT ENDS -->
+
+    
+</div><!-- PAGE ENDS -->
+
+<!-- FOOTER LINE BEGINS -->
+<div id="footer_line" class="footer_line" align="center">
+    <!-- FOOTER TOP BEGINS -->
+    <div id="footer_top"></div>
+    <!-- FOOTER BEGINS -->
+    <div id="footer">
+        <div id="footer_containers">
+            <div id="left" class="footer1_3">
+                <img id="Img1" class="shadow_img" src="images/equip.png" />
+                <div id="left_text" class="shadow_img shadow_txt">
+                    <h1>Specials for NRA members</h1>
+                    <p>We have the best options for you. From explosive tip arrows to the new mini patriot grenade luncher. Ask for our mechanical companion.</p>
+                    <img src="images/mecDog.png" />
+                </div>
+            </div>
+            <div id="center" class="footer1_3 mob_foot_fix">
+                
+                <img id="license" class="shadow_img" src="images/license.png" />
+                
+            </div>
+            <div id="right" class="footer1_3 mob_foot_fix">
+                <img id="noPass" src="images/noPass.png" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div><!-- FOOTER ENDS -->
+
+    <div id="footer_bottom">
+       <p> Bite n' Scratch Hunting Grounds 1636 Doomlake Dr. New Columbia MO, 65202 | info@bitenscratch.com</p>
+    </div>
+    <!-- walker BEGINS -->
+    <div id="walker_area" class="walker">
+        <div id="walkers">
+            <img id="walker_img" src="images/walker.gif" />
+            <img id="walker_img2" class="reversed" src="images/walker.gif" />
+        </div>
+    </div>
+</div><!-- FOOTER LINE ENDS -->
+<script src="js/zombies.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#left-col {
+  height: 2400px !important; }
+
+#hunt-menu {
+  position: fixed !important; }
+
+.panel_h {
+  position: relative !important;
+  border-bottom: 1px dashed white !important;
+  display: block !important; }
+
+.reversed, .normal {
+  display: none !important; }
+

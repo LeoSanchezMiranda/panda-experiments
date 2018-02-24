@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="language" content="english"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Members | Bite n Scratch | Zombie Hunting | Outdoor Activities | New Columbia</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/zombies.css">
+<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
+</head>
+
+<body>
+<!-- INSERT VALIDATION SCRIPT HERE. AAAAAAAAAHHHHHH... C#!!! YOU'RE NEXT IN LINE XD  -->
+<!-- APPARENTLY LOCAL TEST ONLY SUPPORTS THE "GET" METHOD FOR FORMS :( -->
+<!-- HEADER CONTAINER START -->
+<div id="header_container" align="center">
+    <!-- HEADER START -->
+    <div id="header">
+        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+        <div id="right_header" align="right">
+            <div id="social">
+                <ul id="navlist">
+                    <li id="fb"><a href="https://www.facebook.com/BNSZombieHunting" target="_blank"></a></li>
+                    <li id="tw"><a href="https://twitter.com/ZombieHuntingG" target="_blank"></a></li>
+                </ul>
+            </div>
+            <!--<div id="address">
+                <h1>Bite n' Scratch Hunting Grounds 1636 Doomlake Dr. </h1> 
+                <p>New Columbia MO, 65202</p>
+            </div>-->
+    	</div>
+        <!-- MENU START -->
+        <div id="menu" align="center">
+            <div id="menu_container">
+            <ul id="main_menu">
+                <li id="home_btn"><a href="index.html"><span aria-hidden="true" class="icon-home"></span>Home</a></li>
+                <li id="hunting_btn"><a href="hunting.html"><span aria-hidden="true" class="icon-target"></span>Hunting</a></li>
+                <li id="activities_btn"><a href="activities.html"><span aria-hidden="true" class="icon-fire"></span>Activities</a></li>
+                <li id="contact_btn"><a href="contact.html"><span aria-hidden="true" class="icon-mail"></span>Contact</a></li>
+                <li id="useless_btn"><a href="404.html"><span aria-hidden="true" class="icon-grin"></span>Useless</a></li>
+                <li id="logout_btn"><a href="index.html"><span aria-hidden="true" class="icon-user"></span>Log Out</a></li>
+            </ul>
+            <!-- 
+            <div id="login_panel" class="shadow_img nono">
+                <h1>You sure?</h1>
+                <a href="index.html" class="shadow_txt"><button type="submit" id="login_btn"><span aria-hidden="true" class="icon-user"></span> EXIT</button></a>
+            </div>
+            <!-- AAHHH... NVM -->
+            </div>
+        </div><!-- MENU ENDS -->
+    </div><!-- HEADER ENDS -->
+</div><!-- HEADER CONTAINER ENDS -->
+
+<div id="page">
+    <!-- CONTENT START -->
+    <div id="content">
+
+    
+    
+    <!-- MAIN START -->
+    <div id="main">
+        <div id="gStart">
+            <div id="trophy-header" class="shadow_txt shadow_img darkBG-6">
+                <h1>Special announcement <span id="kirby-dance" class="normal-please"><(^-^<)</span> Kirby Dance!</h1>
+            </div>
+            <div id="trophy-counter" class="shadow_txt darkBG-5 shadow_img">
+                <div class="trophy-container">
+                    <div class="iconT-zombie icon-trophyA"></div>
+                    <div class="trophy-individual">
+                        <h3>ZOMBIES</h3>
+                        <p id="zombie-Scounter">16</p>
+                    </div>
+                </div>
+                <div class="trophy-container">
+                    <div class="iconT-regular icon-trophyA"></div>
+                    <div class="trophy-individual">
+                        <h3>REGULAR</h3>
+                        <p id="regular-Scounter">8</p>
+                    </div>
+                </div>
+                <div class="trophy-container">
+                    <div class="iconT-premium icon-trophyA"></div>
+                    <div class="trophy-individual">
+                        <h3>PREMIUM</h3>
+                        <p id="premium-Scounter">4</p>
+                    </div>
+                </div>
+                <div class="trophy-container">
+                    <div class="iconT-mutant icon-trophyA"></div>
+                    <div class="trophy-individual">
+                        <h3>MUTANTS</h3>
+                        <p id="mutant-Scounter">12</p>
+                    </div>
+                </div>
+                <div class="trophy-container last">
+                    <div class="iconT-cyber icon-trophyA"></div>
+                    <div class="trophy-individual">
+                        <h3>CYBER</h3>
+                        <p id="cyber-Scounter">2</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="trophy-panel" class="shadow_txt">
+                <h2>Numbers on this computer.</h2>
+                <!-- SOMEHOW... I JUST FEEL LIKE I NEED TO PUT A STYLE TAG HERE.. MAYBE IS A DISTURBANCE IN THE FORCE -->
+                <table id="table_scores" style="text-align:center; margin:0 auto;" align="center">
+                    <tr id="zombieScoresTableTitleHavingFunWithLongNames">
+                        <td>SPEEDY</td>
+                        <td>NORM A</td>
+                        <td>NORM B</td>
+                        <td>SLOW</td>
+                    </tr>
+                    <tr id="zombieScoresTableImagesAndStillHavingFunWithLongNames">
+                        <td><div id="speedy_zombie" class="zombie-trophyRoom"></div></td>
+                        <td><div id="normal_zombie1" class="zombie-trophyRoom"></div></td>
+                        <td><div id="normal_zombie2" class="zombie-trophyRoom"></div></td>
+                        <td><div id="slow_zombie" class="zombie-trophyRoom"></div></td>
+                    </tr>
+                    <tr id="zs-FunOver">
+                        <td id="speedy-score">Shot <span>0</span> times</td>
+                        <td id="norm1-score">Shot <span>0</span> times</td>
+                        <td id="norm2-score">Shot <span>0</span> times</td>
+                        <td id="slow-score">Shot <span>0</span> times</td>
+                    </tr>
+                    <tr>
+                        <td class="stat-title">Headshots:</td>
+                        <td class="stat-number" id="stat-headshots">0</td>
+                        <td class="stat-title">Shots:</td>
+                        <td class="stat-number" id="stat-shots">0</td>
+                    </tr>
+                    <tr>
+                        <td class="stat-title">Hits:</td>
+                        <td class="stat-number" id="stat-hits">0</td>
+                        <td class="stat-title">Escaped:</td>
+                        <td class="stat-number" id="stat-escaped">0</td>
+                    </tr>
+                    <tr>
+                        <td class="stat-title high-score" colspan=2>High Score:</td>
+                        <td class="stat-number high-score" id="stat-hScore">0</td>
+                        <td class="stat-number" ><button type="button" id="clear_all_data">CLEAR ALL</button></td>
+                    </tr>
+                    <noscript>
+                        <tr>
+                            <td class="" colspan=4>Please consider installing/activating JavaScript. Is secure and will help you improve your web experience. Like this awesome game you missed :(</td>
+                        </tr>
+                    </noscript>
+                </table>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    
+    </div><!-- MAIN ENDS -->
+    </div><!-- CONTENT ENDS -->
+
+    
+</div><!-- PAGE ENDS -->
+
+<!-- FOOTER LINE BEGINS -->
+<div id="footer_line" class="footer_line" align="center">
+    <!-- FOOTER TOP BEGINS -->
+    <div id="footer_top"></div>
+    <!-- FOOTER BEGINS -->
+    <div id="footer">
+        <div id="footer_containers">
+            <div id="left" class="footer1_3">
+                <img id="Img1" class="shadow_img" src="images/equip.png" />
+                <div id="left_text" class="shadow_img shadow_txt">
+                    <h1>Specials for NRA members</h1>
+                    <p>We have the best options for you. From explosive tip arrows to the new mini patriot grenade luncher. Ask for our mechanical companion.</p>
+                    <img src="images/mecDog.png" />
+                </div>
+            </div>
+            <div id="center" class="footer1_3 mob_foot_fix">
+                
+                <img id="license" class="shadow_img" src="images/license.png" />
+                
+            </div>
+            <div id="right" class="footer1_3 mob_foot_fix">
+                <img id="noPass" src="images/noPass.png" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div><!-- FOOTER ENDS -->
+
+    <div id="footer_bottom">
+       <p> Bite n' Scratch Hunting Grounds 1636 Doomlake Dr. New Columbia MO, 65202 | info@bitenscratch.com</p>
+    </div>
+    <!-- walker BEGINS -->
+    <div id="walker_area" class="walker">
+        <div id="walkers">
+            <img id="walker_img" src="images/walker.gif" />
+            <img id="walker_img2" class="reversed" src="images/walker.gif" />
+        </div>
+
+    </div>
+</div><!-- FOOTER LINE ENDS -->
+<script src="js/zombies.js"></script>
+<script src="js/kirby.js"></script>
+</body>
+</html>
