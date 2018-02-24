@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Html Creator Demo</title>
+	<meta charset="utf-8" />
+    <script src="html-creator.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.generate').on('click', function () {
+                
+                var parameters = ['div', ['h1', 'This is a header with <b>HTML</b> inside'],'This is just some text with no tag, and next should be an empty div',['div'], ['p', 'This is a parragraph ', ['span', 'with a span inside']]];
+
+                var tags = createHtmlTagFromParameters(parameters);
+
+                $('.output').text(tags);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <h1>Example</h1>
+
+    <p>I was trying to find a way to parse a text area into an array, I just need to play some more with it to make the content dynamic</p>
+
+    <p>this example uses the following array
+    <b>['div', ['h1', 'This is a header with &lt;b>HTML&lt;/b> inside'],'This is just some text with no tag, and next should be an empty div',['div'], ['p', 'This is a parragraph ', ['span', 'with a span inside']]]</b> 
+    as you can see in the source code.</p>
+
+    <button class="generate">Generate Html</button>
+    <br />
+    <textarea cols="100" rows="10" class="output"></textarea>
+</body>
+</html>
