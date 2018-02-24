@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="html-creator.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.generate').on('click', function () {
+                
+                var parameters = ['a', ['b', 'More'],'Text', ['div'], ' and more <b>Text</b>'];
+
+                var tags = createHtml(parameters);
+
+                $('.output').text(tags);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <h1>Example</h1>
+
+    <p>Apologies for this example, I was trying to find a way to parse a text area into an array, I know is not part of the task, and I imagine I can do it, I just need a little more time for it. I just wanted to show the content being dynamic.</p>
+
+    <p>this example uses the following array <b>['a', ['b', 'More'],'Text', ['div'], ' and more &lt;b>Text&lt;/b>']</b> as you can see in the source code.</p>
+
+    <p>I'm sure this can be refactored and made into a self documented function, but for the lack of time I would rather show a working product and then improve upon it, as such is the agile methodology</p>
+
+    <button class="generate">Generate Html</button>
+    <br />
+    <textarea cols="100" rows="10" class="output"></textarea>
+</body>
+</html>
