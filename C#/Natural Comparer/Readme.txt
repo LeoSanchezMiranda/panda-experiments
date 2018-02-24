@@ -1,0 +1,1 @@
+Just a small class to order collections like a regular person would (natural comparison).  This will used numbers properly (1 < 02, -2 < 1, etc...)
