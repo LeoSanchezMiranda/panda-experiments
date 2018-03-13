@@ -1,0 +1,19 @@
+﻿<div class="jumbotron">
+    <h1>Stateless Checkout</h1>
+    <p class="lead">A Stateless Cart demo</p>
+
+    <form class="form-inline" role="form">
+        <input type="text" class="form-control" ng-model="CartId">
+
+        <button class="btn btn-primary" ng-click="RestoreCartInformation()">Restore Cart</button>
+
+        <button class="btn btn-warning" ng-click="CreateNewCart()">Create New Cart</button>
+    </form>
+</div>
+
+<div class="row container" ng-if="CartIsInitialized" ng-cloak>
+    @Html.Partial("CartItem")
+    @Html.Partial("PersonalInfo")
+    @Html.Partial("ShippingInfo")
+    @Html.Partial("BillingInfo")
+</div>

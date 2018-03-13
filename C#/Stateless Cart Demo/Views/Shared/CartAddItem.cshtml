@@ -1,0 +1,9 @@
+﻿<div class="container">
+    <form class="form-inline" role="form" ng-if="CartId != ''">
+        <label class="col-xs-1" for="email">Product#: </label>
+        <input class="col-xs-2" type="text" class="form-control" name="productId" id="productId" placeholder="" ng-model="ItemToAdd.id">
+        <label class="col-xs-1" for="pwd">Quantity: </label>
+        <input class="col-xs-2" type="number" class="form-control" name="Quantity" id="Quantity" placeholder="" ng-model="ItemToAdd.quantity">
+        <button class="col-xs-1" class="btn btn-info" ng-click="AddCartItem()">Add</button>
+    </form>
+</div>
