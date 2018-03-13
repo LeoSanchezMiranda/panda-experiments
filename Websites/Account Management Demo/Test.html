@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                document.createTextNode("@-ms-viewport{width:auto!important}")
+            );
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+    <title>Account Test</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assets/CSS/Styles.css" /> 
+    <link rel="stylesheet" href="Assets/CSS/icons.css" />
+    <script type="text/javascript" src="Assets/JS/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="Assets/JS/Main.js"></script>
+    <script type="text/javascript" src="Assets/JS/modernizr.js"></script>
+</head>
+<body>
+
+    <main>
+    
+        <!--
+            <div class='progress'>
+                <progress  max='100'></progress>
+                <span>0</span>%
+            </div>-->
+    
+        <header>
+            <h1 class="title">My Account</h1>
+            <hr />
+        </header>    
+
+        <nav>
+            <ul class="mobile-main-header">
+                <li class="logo">MUSA</li>
+                <li class="spacer"></li>
+                <li class="is-selected account">My Account</li>
+                <li class="cart">Cart</li>
+            </ul>   
+            
+            <ul class="menu">
+                <li class="profile">
+                    <a href="#profile">     
+                        <span class="i-user2"></span> 
+                        <span>Profile</span>   
+                    </a>
+                </li><li class="address">
+                    <a  href="#addresses">     
+                        <span class="i-notebook"></span>  
+                        <span>Addresses</span>   
+                    </a>
+                </li><li class="billing">
+                    <a href="#billing">     
+                        <span class="i-credit"></span> 
+                        <span>Billing</span>   
+                    </a>
+                </li><li class="orders">
+                    <a href="#orders">     
+                        <span class="i-box"></span>   
+                        <span>Orders</span>   
+                    </a>
+                </li><li class="notifications">
+                    <a href="#notifications">     
+                        <span class="i-comment"></span>   
+                        <span>Notifications</span>  
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       
+        <div class="page is-active" id="start">
+            <img class="midway-logo" src="http://content.midwayusa.com/content/images/midwayusa_logo_170x72.png">
+        </div>
+
+        <section class="page" id="profile">
+        
+            <div data-block="email" class="email block">
+                <span class="edit">Edit <i class="i-compose"></i></span>
+                <h3 class="block-header">Email <span></span></h3>
+                <div class="content">
+                    <label>Email<input name="email" type="email" placeholder="yourname@yourdomain.com" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+            <div data-block="password" class="password block">
+                <span class="edit">Edit <i class="i-compose"></i></span>
+                <h3 class="block-header">Password <span></span></h3>
+                <div class="content">
+                    <label>Passord<input name="password" type="password" placeholder="**********" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+            <div data-block="name" class="name block">
+                <span class="edit">Edit <i class="i-compose"></i></span>
+                <h3 class="block-header">Name <span></span></h3>
+                <div class="content">
+                    <label>Prefix<input name="prefix" type="text" placeholder="Mr." /></label>
+                    <label>First Name<input name="firstname" type="text" placeholder="John" /></label>
+                    <label>Last Name<input name="lastname" type="text" placeholder="Doe" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+            <div data-block="birthday" class="birthday block">
+                <span class="edit">Edit <i class="i-compose"></i></span>
+                <h3 class="block-header">Birthday <span></span></h3>
+                <div class="content">
+                    <label>Birthday<input name="birthday" type="date" placeholder="01/01/2000" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+            <div data-block="phone" class="phone block">
+                <span class="edit">Edit <i class="i-compose"></i></span>
+                <h3 class="block-header">Phone <span></span></h3>
+                <div class="content">
+                    <label>Phone Number + Ext.<input name="phone" type="tel" placeholder="XXX-XXX-XXXX" /></label>
+                    <label class="checkbox">Send Notifications to this number <input type="checkbox" name="notifications" value="notifications" checked="checked"></label>
+                    <label class="checkbox">Send Alerts to this number <input type="checkbox" name="alerts" value="alerts" checked="checked"></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+            
+            <div data-block="privacy" class="privacy block">
+                <label class="checkbox">Keep my information private <input type="checkbox" name="privacy" value="privacy" checked="checked"></label>
+            </div>
+
+        </section>
+
+        <section class="page" id="addresses">
+            <div class="item-list"></div>
+
+            <a class="add-address btn btn-primary">Add Address</a>
+
+            <div class="add block">
+                <h3 class="block-header">Add Address</h3>
+                <div class="content">
+                    <label>Street Address*<input name="street" type="text" placeholder="N Fake Street 1234" /></label>
+                    <label>Zip*<input name="zip" type="text" placeholder="65203" /></label>
+                    <label>City & State*<input name="citystate" type="text" placeholder="Columbia, MO" /></label>
+                    <label>Country*<input name="country" type="text" placeholder="United States" /></label>
+                    <label>Make this my default address<input name="default" type="checkbox" checked="checked" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="page" id="billing">
+            <div class="item-list"></div>
+
+            <a class="add-card btn btn-primary">Add Credit Card</a>
+
+            <div class="add block">
+                <h3 class="block-header">Add Credit Card</h3>
+                <div class="content">
+                    <label>Name on Card*<input name="name" type="text" placeholder="John Doe" /></label>
+                    <label>Card Number*<input name="number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" /></label>
+                    <label>CID*<input name="cid" type="text" placeholder="3 or 4 digits" /></label>
+                    <label>Address*<select class="card-address-dropdown"><option disabled selected>Select an Address</option></select></label>
+                    <label>Expiration Date*<input name="expdate" type="text" placeholder="mm/yy" /></label>
+                    <label>Make this my default card<input name="default" type="checkbox" checked="checked" /></label>
+                    <span class="actions"><a class="save btn btn-primary">Save</a> | <a class="cancel">Cancel</a></span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="page" id="orders">
+            <div>
+                <p>
+                    For the purposes of this test, this section is empty. <a href="#Profile">Go to your Profile.</a>
+                </p>
+            </div>
+
+        </section>
+
+        <section class="page" id="notifications">
+            <a href="">Manage your product arrival notifications</a>
+            <div class="notification block">
+                <details><summary class="notification-summary block-header">Product Arrived</summary>
+                    <div class="content">
+                        <img class="product-image" src="http://placehold.it/60x40"/>
+                        <p><a>CCI Blazer Ammunition 22 Long Rifle 40 Grain Lead Round Nose</a></p>
+                        <p><a>Date: 01/06/14</a></p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>
