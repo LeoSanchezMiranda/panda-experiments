@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.leo_sanchez.itunestopalbums.AlbumActivity">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:paddingRight="50dp"
+                android:onClick="goBack"
+                />
+
+            <ImageView
+                android:id="@+id/albumImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_image_black_24dp"
+                tools:ignore="VectorDrawableCompat"
+                android:layout_below="@id/backButton"/>
+
+            <TextView
+                android:id="@+id/albumName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/albumImage"
+                android:text="Album Name"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/albumArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/albumName"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitXY"
+                android:text="by Album Artists"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/albumArtist"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="navigateToItunes"
+                android:text="Buy on itunes for $10.00"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/trackCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buyButton"
+                android:scaleType="fitXY"
+                android:text="Contains X tracks"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/releaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trackCount"
+                android:scaleType="fitXY"
+                android:text="Released on "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/releaseDate"
+                android:scaleType="fitXY"
+                android:text="Category "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/rights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitXY"
+                android:text="Rights "
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
