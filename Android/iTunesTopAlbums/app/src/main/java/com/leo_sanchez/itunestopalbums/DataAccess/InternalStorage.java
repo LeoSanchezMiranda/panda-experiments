@@ -36,6 +36,11 @@ public final class InternalStorage{
     public static CacheObject readObject(Context context, String key) throws IOException,
             ClassNotFoundException {
         FileInputStream fis = context.openFileInput(key);
+
+        if(fis == null){
+            return null;
+        }
+
         ObjectInputStream ois = new ObjectInputStream(fis);
         CacheObject object = (CacheObject) ois.readObject();
         return object;

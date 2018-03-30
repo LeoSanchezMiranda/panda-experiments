@@ -23,7 +23,6 @@ public class AlbumActivity extends DownloadJsonActivity {
 
     String albumId;
     Album thisAlbum;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
