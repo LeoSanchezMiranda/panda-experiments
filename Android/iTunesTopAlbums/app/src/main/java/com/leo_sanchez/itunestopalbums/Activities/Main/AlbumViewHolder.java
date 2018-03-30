@@ -1,15 +1,12 @@
-package com.leo_sanchez.itunestopalbums.Main;
+package com.leo_sanchez.itunestopalbums.Activities.Main;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.leo_sanchez.itunestopalbums.Models.Album;
 import com.leo_sanchez.itunestopalbums.R;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by ldjam on 3/29/2018.

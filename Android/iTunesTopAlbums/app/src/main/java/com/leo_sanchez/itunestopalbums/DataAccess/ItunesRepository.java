@@ -2,10 +2,8 @@ package com.leo_sanchez.itunestopalbums.DataAccess;
 
 import android.os.AsyncTask;
 
-import com.leo_sanchez.itunestopalbums.Logic.FeedEntryDtoMapping;
-import com.leo_sanchez.itunestopalbums.Main.DownloadCompleteListener;
-
-import org.json.JSONException;
+import com.leo_sanchez.itunestopalbums.Utilities.FeedEntryDtoMapping;
+import com.leo_sanchez.itunestopalbums.Activities.DownloadCompleteListener;
 
 import java.io.BufferedReader;
 import java.io.IOException;

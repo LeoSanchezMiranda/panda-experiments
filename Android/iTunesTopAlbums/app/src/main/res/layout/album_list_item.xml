@@ -6,6 +6,7 @@
     android:padding="5dp"
     android:clickable="true"
     android:onClick="handleAlbumClick"
+    android:background="@drawable/borderbottom"
     >
 
 

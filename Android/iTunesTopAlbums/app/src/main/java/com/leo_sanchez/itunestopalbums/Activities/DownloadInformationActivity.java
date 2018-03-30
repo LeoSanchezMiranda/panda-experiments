@@ -1,39 +1,43 @@
-package com.leo_sanchez.itunestopalbums.Main;
+package com.leo_sanchez.itunestopalbums.Activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
-import com.leo_sanchez.itunestopalbums.AlbumActivity;
 import com.leo_sanchez.itunestopalbums.DataAccess.APIContracts.IItunesAPIContract;
 import com.leo_sanchez.itunestopalbums.DataAccess.ItunesRepository;
 import com.leo_sanchez.itunestopalbums.Models.Album;
-import com.leo_sanchez.itunestopalbums.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements DownloadCompleteListener{
+public class DownloadInformationActivity extends AppCompatActivity implements DownloadCompleteListener{
 
-    ListFragment mListFragment;
     ProgressDialog mProgressDialog;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void downloadComplete(ArrayList<Album> albums) {
+        handleAlbumsInformation(albums);
+        if (mProgressDialog != null) {
+            mProgressDialog.hide();
+        }
+    }
 
+    protected void handleAlbumsInformation(ArrayList<Album> albums) {
+    }
+
+    @Override
+    public void startDownload(){
+        new ItunesRepository(this).execute(IItunesAPIContract.topTenAlbumsEndpoint);
+    }
+
+    public void startPreload() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
-        setContentView(R.layout.activity_main);
 
         if (isNetworkConnected()) {
             mProgressDialog = new ProgressDialog(this);
@@ -54,43 +58,10 @@ public class MainActivity extends AppCompatActivity implements DownloadCompleteL
         }
     }
 
-    @Override
-    public void downloadComplete(ArrayList<Album> albums) {
-
-
-
-        showListFragment(albums);
-        if (mProgressDialog != null) {
-            mProgressDialog.hide();
-        }
-    }
-
-
-
-    private void startDownload(){
-        new ItunesRepository(this).execute(IItunesAPIContract.topTenAlbumsEndpoint);
-    }
-
-    private void showListFragment(ArrayList<Album> albums) {
-        mListFragment = ListFragment.newInstance(albums);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.fragment_container, mListFragment)
-                .commit();
-
-    }
-
-    private boolean isNetworkConnected() {
+    public boolean isNetworkConnected() {
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
-    }
-
-    public void handleAlbumClick(View view) {
-        TextView albumId = (TextView) view.findViewById(R.id.albumId);
-        Intent intent = new Intent(getBaseContext(), AlbumActivity.class);
-        intent.putExtra("ALBUM_ID", albumId.getText());
-        startActivity(intent);
     }
 }

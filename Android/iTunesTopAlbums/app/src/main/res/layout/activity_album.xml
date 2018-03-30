@@ -13,7 +13,9 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.leo_sanchez.itunestopalbums.AlbumActivity">
+            tools:context=".Activities.Album.AlbumActivity"
+            android:id="@+id/mainLayout"
+            android:visibility="invisible">
 
             <ImageView
                 android:id="@+id/backButton"
@@ -41,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/albumImage"
-                android:text="Album Name"
+                android:text="---"
                 android:textAlignment="center" />
 
             <TextView
@@ -51,7 +53,7 @@
                 android:layout_below="@id/albumName"
                 android:layout_marginBottom="10dp"
                 android:scaleType="fitXY"
-                android:text="by Album Artists"
+                android:text="---"
                 android:textAlignment="center" />
 
             <Button
@@ -65,7 +67,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@color/colorPrimary"
                 android:onClick="navigateToItunes"
-                android:text="Buy on itunes for $10.00"
+                android:text="---"
                 android:textColor="#FFFFFF" />
 
             <TextView
@@ -74,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/buyButton"
                 android:scaleType="fitXY"
-                android:text="Contains X tracks"
+                android:text="---"
                 android:textAlignment="center" />
 
             <TextView
@@ -83,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/trackCount"
                 android:scaleType="fitXY"
-                android:text="Released on "
+                android:text="---"
                 android:textAlignment="center" />
 
             <TextView
@@ -92,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/releaseDate"
                 android:scaleType="fitXY"
-                android:text="Category "
+                android:text="---"
                 android:textAlignment="center" />
 
             <TextView
@@ -102,7 +104,7 @@
                 android:layout_below="@id/category"
                 android:layout_marginTop="30dp"
                 android:scaleType="fitXY"
-                android:text="Rights "
+                android:text="---"
                 android:textAlignment="center" />
 
         </RelativeLayout>

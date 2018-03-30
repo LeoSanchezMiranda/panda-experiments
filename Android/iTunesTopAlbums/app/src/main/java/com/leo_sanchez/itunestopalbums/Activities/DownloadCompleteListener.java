@@ -1,4 +1,6 @@
-package com.leo_sanchez.itunestopalbums.Main;
+package com.leo_sanchez.itunestopalbums.Activities;
+
+import android.support.v7.app.AppCompatActivity;
 
 import com.leo_sanchez.itunestopalbums.Models.Album;
 
@@ -10,4 +12,7 @@ import java.util.ArrayList;
 
 public interface DownloadCompleteListener {
     void downloadComplete(ArrayList<Album> albums);
+    void startDownload();
 }
+
+

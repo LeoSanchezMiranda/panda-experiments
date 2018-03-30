@@ -1,11 +1,11 @@
-package com.leo_sanchez.itunestopalbums.Main;
+package com.leo_sanchez.itunestopalbums.Activities.Main;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.leo_sanchez.itunestopalbums.Logic.BitMapUtility;
+import com.leo_sanchez.itunestopalbums.Utilities.BitMapUtility;
 import com.leo_sanchez.itunestopalbums.Models.Album;
 import com.leo_sanchez.itunestopalbums.R;
 

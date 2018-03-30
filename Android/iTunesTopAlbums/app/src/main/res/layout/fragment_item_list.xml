@@ -9,6 +9,6 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.leo_sanchez.itunestopalbums.Main.ListFragment"
+    tools:context=".Activities.Main.ListFragment"
     tools:listitem="@layout/album_list_item"
     />

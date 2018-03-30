@@ -1,4 +1,4 @@
-package com.leo_sanchez.itunestopalbums.Logic;
+package com.leo_sanchez.itunestopalbums.Utilities;
 
 import com.google.gson.Gson;
 import com.leo_sanchez.itunestopalbums.DataAccess.DTO.FeedElement;
@@ -7,9 +7,6 @@ import com.leo_sanchez.itunestopalbums.DataAccess.DTO.ItunesFeedDTO;
 import com.leo_sanchez.itunestopalbums.Models.Album;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by ldjam on 3/28/2018.
