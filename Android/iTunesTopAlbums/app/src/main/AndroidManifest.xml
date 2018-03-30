@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.Album.AlbumActivity"></activity>
+        <activity android:name=".Activities.DownloadJsonActivity" />
     </application>
 
 </manifest>

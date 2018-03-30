@@ -6,6 +6,8 @@ import com.leo_sanchez.itunestopalbums.DataAccess.DTO.FeedEntry;
 import com.leo_sanchez.itunestopalbums.DataAccess.DTO.ItunesFeedDTO;
 import com.leo_sanchez.itunestopalbums.Models.Album;
 
+import org.json.JSONException;
+
 import java.util.ArrayList;
 
 /**
@@ -20,7 +22,7 @@ public class FeedEntryDtoMapping {
         gson = new Gson();
     }
 
-    public ArrayList<Album> toAlbums(String response){
+    public ArrayList<Album> toAlbums(String response) throws JSONException{
         ItunesFeedDTO feedResponse = gson.fromJson(response, ItunesFeedDTO.class);
 
         ArrayList<Album> albums = new ArrayList<Album>();

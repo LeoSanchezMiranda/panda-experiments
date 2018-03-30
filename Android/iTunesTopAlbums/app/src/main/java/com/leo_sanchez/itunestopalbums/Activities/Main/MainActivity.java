@@ -5,14 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.leo_sanchez.itunestopalbums.Activities.DownloadInformationActivity;
 import com.leo_sanchez.itunestopalbums.Activities.Album.AlbumActivity;
+import com.leo_sanchez.itunestopalbums.Activities.DownloadJsonActivity;
 import com.leo_sanchez.itunestopalbums.Models.Album;
 import com.leo_sanchez.itunestopalbums.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends DownloadInformationActivity {
+public class MainActivity extends DownloadJsonActivity {
 
     ListFragment mListFragment;
 

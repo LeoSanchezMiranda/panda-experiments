@@ -11,15 +11,15 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.leo_sanchez.itunestopalbums.Utilities.BitMapUtility;
-import com.leo_sanchez.itunestopalbums.Activities.DownloadInformationActivity;
+import com.leo_sanchez.itunestopalbums.Activities.DownloadJsonActivity;
 import com.leo_sanchez.itunestopalbums.Activities.Main.MainActivity;
 import com.leo_sanchez.itunestopalbums.Models.Album;
 import com.leo_sanchez.itunestopalbums.R;
+import com.leo_sanchez.itunestopalbums.Utilities.BitMapUtility;
 
 import java.util.ArrayList;
 
-public class AlbumActivity extends DownloadInformationActivity {
+public class AlbumActivity extends DownloadJsonActivity {
 
     String albumId;
     Album thisAlbum;

@@ -10,29 +10,78 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 
 import com.leo_sanchez.itunestopalbums.DataAccess.APIContracts.IItunesAPIContract;
-import com.leo_sanchez.itunestopalbums.DataAccess.ItunesRepository;
+import com.leo_sanchez.itunestopalbums.DataAccess.CacheObject;
+import com.leo_sanchez.itunestopalbums.DataAccess.IJsonDataAccess;
+import com.leo_sanchez.itunestopalbums.DataAccess.InternalStorage;
+import com.leo_sanchez.itunestopalbums.DataAccess.OkHttpJsonDataAccess;
 import com.leo_sanchez.itunestopalbums.Models.Album;
+import com.leo_sanchez.itunestopalbums.Utilities.FeedEntryDtoMapping;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
-public class DownloadInformationActivity extends AppCompatActivity implements DownloadCompleteListener{
+public class DownloadJsonActivity extends AppCompatActivity{
 
     ProgressDialog mProgressDialog;
+    IJsonDataAccess jsonDataAccess;
+    boolean needToSaveAlbumsInLocalStorage;
+    String cacheKey = "ALBUMS_INTERNAL";
 
-    @Override
-    public void downloadComplete(ArrayList<Album> albums) {
-        handleAlbumsInformation(albums);
-        if (mProgressDialog != null) {
-            mProgressDialog.hide();
-        }
+    public DownloadJsonActivity(){
+        jsonDataAccess = new OkHttpJsonDataAccess(this);
+        needToSaveAlbumsInLocalStorage = false;
     }
 
     protected void handleAlbumsInformation(ArrayList<Album> albums) {
     }
 
-    @Override
+    public void handleJsonResponse(String json){
+        ArrayList<Album> albums = new ArrayList<Album>();
+
+        try {
+            albums = new FeedEntryDtoMapping().toAlbums(json);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if(needToSaveAlbumsInLocalStorage){
+            try {
+                InternalStorage.writeObject(DownloadJsonActivity.this, cacheKey, json, 1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        handleAlbumsInformation(albums);
+
+        if (mProgressDialog != null) {
+            mProgressDialog.hide();
+        }
+    }
+
     public void startDownload(){
-        new ItunesRepository(this).execute(IItunesAPIContract.topTenAlbumsEndpoint);
+        CacheObject albumsOnFile = null;
+
+        try{
+            albumsOnFile = InternalStorage.readObject(DownloadJsonActivity.this, cacheKey);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if(albumsOnFile != null && albumsOnFile.isActive()){
+            handleJsonResponse((String) albumsOnFile.getValue());
+        } else {
+            needToSaveAlbumsInLocalStorage = true;
+            jsonDataAccess.getJsonFromUrl(IItunesAPIContract.topTenAlbumsEndpoint);
+        }
+
+
     }
 
     public void startPreload() {
